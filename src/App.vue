@@ -130,13 +130,11 @@ export default {
       this.showJokePage = true;
     },
   },
-  computed: {
+   computed: {
     hitlist() {
-      if (this.searchText != "") {
-        return this.list.filter(({ title }) => {
-          return title.toLowerCase().includes(this.searchText.toLowerCase());
-        });
-      }
+      return this.list.filter(({ title }) => {
+        return title.toLowerCase().includes(this.searchText.toLowerCase());
+      });
     },
   },
   mounted() {
