@@ -31,11 +31,12 @@ export default {
     };
   },
   methods: {
-    search: function() {
-      this.$emit("searching", this.searchtext);
+       search: function() {
+      if(this.searchtext != ""){
+    this.$emit("searching", this.searchtext);
       this.searchtext = "";
+      }
     },
-
     addnewJoke: function() {
       this.$emit("addJoke", {});
     },
