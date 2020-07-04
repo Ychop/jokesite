@@ -132,9 +132,11 @@ export default {
   },
   computed: {
     hitlist() {
-      return this.list.filter(({ title }) => {
-        return title.toLowerCase().includes(this.searchText.toLowerCase());
-      });
+      if (this.searchText != "") {
+        return this.list.filter(({ title }) => {
+          return title.toLowerCase().includes(this.searchText.toLowerCase());
+        });
+      }
     },
   },
   mounted() {
