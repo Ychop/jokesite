@@ -62,6 +62,7 @@ export default {
       if (this.showSearch === false) {
         this.showSearch = true;
         this.showJokePage = false;
+        this.showCreatePage = false;
       }
     },
 
